@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anthony Chammas — Senior Full-Stack Developer building web platforms, mobile applications, APIs, and Unity experiences." />
+  <meta name="author" content="Anthony Chammas" />
+  <title>Anthony Chammas | Senior Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#home" class="logo" aria-label="Go to homepage">
+      <span class="logo-bracket">&lt;</span>AC<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">01. About</a>
+      <a href="#experience">02. Experience</a>
+      <a href="#projects">03. Projects</a>
+      <a href="#code">04. Code</a>
+      <a href="#skills">05. Skills</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Available for freelance work</p>
+          <p class="terminal-line"><span class="prompt">anthony@portfolio:~$</span> whoami</p>
+          <h1>
+            I build <span class="gradient-text">digital experiences</span><br />
+            that feel alive.
+          </h1>
+          <p class="hero-copy">
+            Senior full-stack developer building complete web platforms, API-powered products,
+            hybrid mobile applications, and interactive Unity systems from idea to delivery.
+          </p>
+          <div class="typing-wrap" aria-live="polite">
+            <span class="typing-label">Currently building:</span>
+            <span id="typingText"></span><span class="typing-cursor">_</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore My Work <span>↗</span></a>
+            <a href="#contact" class="btn btn-ghost">Start a Project</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>3+</strong><span>Years building</span></div>
+            <div><strong>8</strong><span>Product platforms</span></div>
+            <div><strong>4</strong><span>Unity prototypes</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-hidden="true">
+          <div class="code-window floating-card">
+            <div class="window-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="window-title">developer.js</span>
+            </div>
+            <pre><code><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Anthony Chammas"</span>,
+  role: <span class="code-green">"Senior Full-Stack Developer"</span>,
+  stack: [
+    <span class="code-green">"JavaScript"</span>, <span class="code-green">"PHP"</span>,
+    <span class="code-green">"Angular"</span>, <span class="code-green">"MySQL"</span>
+  ],
+  mindset: <span class="code-green">"Build. Learn. Improve."</span>,
+  available: <span class="code-orange">true</span>
+};
+
+<span class="code-blue">developer</span>.<span class="code-yellow">createSomethingGreat</span>();</code></pre>
+          </div>
+          <div class="orbit orbit-one"><span>JS</span></div>
+          <div class="orbit orbit-two"><span>API</span></div>
+          <div class="orbit orbit-three"><span>UI</span></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <span>SCROLL</span><i></i>
+      </a>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-heading reveal">
+        <p class="section-index">01 / ABOUT</p>
+        <h2>Code with purpose.<br /><span>Design with personality.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            I am a results-driven developer based in Lebanon with professional experience building
+            scalable web applications, integrating third-party services, and transforming business
+            requirements into reliable technical solutions.
+          </p>
+          <p>
+            My work spans front-end architecture, full-stack development, RESTful API integration,
+            debugging, mobile applications, and Unity projects. I enjoy solving complex problems,
+            refining user experiences, and turning rough ideas into polished products.
+          </p>
+          <p>
+            Every project is approached with clear communication, maintainable code, responsive design,
+            and a strong focus on the user experience.
+          </p>
+        </div>
+
+        <div class="about-terminal reveal delay-1">
+          <div class="terminal-card">
+            <div class="terminal-top">
+              <span>anthony-profile.json</span>
+              <span class="terminal-status">● live</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="key">location</span>: <span class="value">"Dekweneh, Lebanon"</span></p>
+              <p><span class="key">focus</span>: <span class="value">"Web, APIs, Mobile, Unity"</span></p>
+              <p><span class="key">education</span>: <span class="value">"Computer Science"</span></p>
+              <p><span class="key">languages</span>: <span class="value">["Arabic", "English", "French"]</span></p>
+              <p><span class="key">status</span>: <span class="value success">"Open to opportunities"</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="section-heading reveal">
+        <p class="section-index">02 / EXPERIENCE</p>
+        <h2>Professional<br /><span>journey.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">AUG 2024 — PRESENT</div>
+          <div class="timeline-card">
+            <div class="timeline-topline">
+              <div>
+                <p class="company">LYST TECHNOLOGIES</p>
+                <h3>Senior Web Developer</h3>
+              </div>
+              <span class="role-tag">CURRENT</span>
+            </div>
+            <p>
+              Building and improving dynamic web applications with JavaScript and RESTful APIs,
+              integrating third-party services, optimizing performance, refining UI/UX, and debugging
+              complex front-end interfaces within an agile development environment.
+            </p>
+            <div class="chip-row">
+              <span>JavaScript</span><span>REST APIs</span><span>UI/UX</span><span>Agile</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">JUN 2023 — JAN 2024</div>
+          <div class="timeline-card">
+            <div class="timeline-topline">
+              <div>
+                <p class="company">BRACKET TECHNOLOGIES</p>
+                <h3>Full-Stack Developer</h3>
+              </div>
+            </div>
+            <p>
+              Developed and modified full-scale web applications, launched a web platform from scratch,
+              performed code reviews and debugging, implemented client requirements, and independently
+              delivered a mobile application based on an existing web system.
+            </p>
+            <div class="chip-row">
+              <span>Full-Stack</span><span>Mobile</span><span>Architecture</span><span>Debugging</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-date">FEB 2023 — MAY 2023</div>
+          <div class="timeline-card">
+            <div class="timeline-topline">
+              <div>
+                <p class="company">LE CARAVELLE CONDOMINIUM</p>
+                <h3>Data Entry / Cashier</h3>
+              </div>
+            </div>
+            <p>
+              Maintained accurate inventory records, updated outdated data, supported customers, and
+              strengthened communication, teamwork, and organizational skills in a fast-paced environment.
+            </p>
+            <div class="chip-row">
+              <span>Data Accuracy</span><span>Customer Service</span><span>Teamwork</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="section-heading reveal">
+        <p class="section-index">03 / PROJECTS</p>
+        <h2>Systems I have<br /><span>built.</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-featured reveal">
+          <div class="project-number">01</div>
+          <div class="project-visual">
+            <div class="browser-mockup">
+              <div class="browser-bar"><span></span><span></span><span></span></div>
+              <div class="platform-layout">
+                <div class="platform-sidebar"></div>
+                <div class="platform-workspace">
+                  <div class="platform-toolbar"></div>
+                  <div class="platform-canvas"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-type">FLAGSHIP · LOW-CODE PLATFORM</p>
+            <h3>EasyCode</h3>
+            <p>
+              A visual web-development workspace with drag-and-drop page building, role-based access,
+              structured approval workflows, page history, custom elements, dynamic data, and live collaboration locks.
+            </p>
+            <div class="project-stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Node.js</span><span>WebSockets</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+          <img class="project-image" src="assets/projects/aiconnect.jpg" alt="AIConnect recruitment platform" />
+          <p class="project-type">RECRUITMENT + AI</p>
+          <h3>AIConnect</h3>
+          <p>A recruitment platform connecting candidates and employers through job search, applications, company tools, profiles, recommendations, and AI-assisted CV creation.</p>
+          <div class="project-stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>AI APIs</span></div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-number">03</div>
+          <img class="project-image contain" src="assets/projects/smarted.png" alt="SmartED learning platform" />
+          <p class="project-type">EDUCATION PLATFORM</p>
+          <h3>SmartED</h3>
+          <p>A learning platform with teacher and student dashboards, course management, assignments, profiles, live-session scheduling, and AI-assisted support.</p>
+          <div class="project-stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>REST APIs</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">04</div>
+          <img class="project-image contain dark-image" src="assets/projects/cyber-alert.png" alt="Cyber Alert security platform" />
+          <p class="project-type">CYBERSECURITY TOOL</p>
+          <h3>Cyber Alert</h3>
+          <p>A security-analysis platform for investigating IP addresses, domains, URLs, and email files with phishing indicators and VirusTotal-powered intelligence.</p>
+          <div class="project-stack"><span>JavaScript</span><span>PHP</span><span>VirusTotal API</span><span>MySQL</span></div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-number">05</div>
+          <img class="project-image" src="assets/projects/anthodrive.webp" alt="AnthoDrive driving quiz application" />
+          <p class="project-type">HYBRID MOBILE APP</p>
+          <h3>AnthoDrive</h3>
+          <p>An offline-friendly driving theory and road-sign quiz with progress history, structured questions, and device integrations for a Cordova-based mobile experience.</p>
+          <div class="project-stack"><span>Apache Cordova</span><span>JavaScript</span><span>SQLite</span><span>Mobile</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">06</div>
+          <img class="project-image" src="assets/projects/gymxpress.jpg" alt="GymXPress e-commerce platform" />
+          <p class="project-type">E-COMMERCE</p>
+          <h3>GymXPress</h3>
+          <p>A full product storefront for fitness equipment and supplements, including catalogue browsing, product details, shopping flows, account features, and administration tools.</p>
+          <div class="project-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-number">07</div>
+          <img class="project-image" src="assets/projects/medicine-id.jpg" alt="Digital Encrypted ID medicine verification platform" />
+          <p class="project-type">HEALTHCARE VERIFICATION</p>
+          <h3>Digital Encrypted ID</h3>
+          <p>A medicine-authorization verification platform for Lebanon with encrypted identifiers, approval lookups, medicine management, and pharmacy reporting.</p>
+          <div class="project-stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Encryption</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">08</div>
+          <img class="project-image" src="assets/projects/all-lebnene.png" alt="All Lebnene multiplayer trivia game" />
+          <p class="project-type">MULTIPLAYER WEB GAME</p>
+          <h3>All Lebnene</h3>
+          <p>A Lebanese trivia experience with room creation, player joining, game modes, question handling, turn management, and live scoreboards.</p>
+          <div class="project-stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Multiplayer Logic</span></div>
+        </article>
+      </div>
+
+      <div class="unity-heading reveal">
+        <p class="section-index">UNITY / C# LAB</p>
+        <h3>Gameplay systems in motion.</h3>
+        <p>Each player is already connected to a dedicated video path. Add your MP4 files to the <code>videos</code> folder using the filenames shown below.</p>
+      </div>
+
+      <div class="unity-grid">
+        <article class="unity-card reveal">
+          <video controls preload="metadata">
+            <source src="videos/tank-game-demo.mp4" type="video/mp4" />
+          </video>
+          <div><span>01</span><h3>Tank Combat AI</h3><p>Procedural maps, pathfinding, autonomous tanks, turret control, homing projectiles, and combat spawning systems.</p><code>videos/tank-game-demo.mp4</code></div>
+        </article>
+        <article class="unity-card reveal delay-1">
+          <video controls preload="metadata">
+            <source src="videos/2d-game-demo.mp4" type="video/mp4" />
+          </video>
+          <div><span>02</span><h3>2D Adventure Systems</h3><p>Player movement, camera control, NPC dialogue, interactive doors, question sequences, and structured conversation data.</p><code>videos/2d-game-demo.mp4</code></div>
+        </article>
+        <article class="unity-card reveal">
+          <video controls preload="metadata">
+            <source src="videos/car-simulation-demo.mp4" type="video/mp4" />
+          </video>
+          <div><span>03</span><h3>Car Simulation</h3><p>Procedural track generation, autonomous driving logic, race positions, car abilities, camera systems, and track events.</p><code>videos/car-simulation-demo.mp4</code></div>
+        </article>
+        <article class="unity-card reveal delay-1">
+          <video controls preload="metadata">
+            <source src="videos/slot-machine-demo.mp4" type="video/mp4" />
+          </video>
+          <div><span>04</span><h3>Slot Machine Prototype</h3><p>Reel-control logic and synchronized randomized lighting effects built as a focused Unity interaction prototype.</p><code>videos/slot-machine-demo.mp4</code></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="code" class="section code-section">
+      <div class="section-heading reveal">
+        <p class="section-index">04 / CODE SHOWCASE</p>
+        <h2>Real systems.<br /><span>Real source.</span></h2>
+      </div>
+
+      <div class="code-showcase-lead reveal">
+        <p>Browse selected implementation work from across my project collection. Each project includes focused excerpts that show the useful parts—architecture, algorithms, security checks, data handling, gameplay, and interaction logic—shortened and lightly cleaned for presentation.</p>
+        <div class="code-metrics" aria-label="Code showcase summary">
+          <span><strong id="codeProjectCount">13</strong> projects</span>
+          <span><strong id="codeSampleCount">25</strong> excerpts</span>
+          <span><strong>5</strong> languages</span>
+        </div>
+      </div>
+
+      <div class="code-filter reveal">
+        <label for="codeSearch">Find a project or feature</label>
+        <div class="code-search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="codeSearch" type="search" placeholder="Try pathfinding, API, PHP, Unity..." autocomplete="off" />
+          <kbd>/</kbd>
+        </div>
+      </div>
+
+      <div class="code-library reveal">
+        <aside class="code-projects" aria-label="Projects with source excerpts">
+          <div class="code-project-list" id="codeProjectList" role="tablist" aria-label="Select a project"></div>
+          <p class="code-empty" id="codeEmpty" hidden>No matching project or feature.</p>
+        </aside>
+
+        <div class="code-workbench">
+          <header class="code-project-header">
+            <div>
+              <p id="activeProjectType">FULL-STACK PLATFORM</p>
+              <h3 id="activeProjectName">EasyCode</h3>
+              <p id="activeProjectDescription"></p>
+            </div>
+            <div class="code-project-stack" id="activeProjectStack"></div>
+          </header>
+
+          <div class="code-feature-tabs" id="codeFeatureTabs" role="tablist" aria-label="Project features"></div>
+
+          <div class="code-stage">
+            <div class="code-toolbar">
+              <div><i></i><i></i><i></i><span id="activeCodePath"></span></div>
+              <button id="copyCode" type="button">Copy code</button>
+            </div>
+            <div class="code-pane active" id="activeCodePane" role="tabpanel">
+              <div class="code-summary">
+                <span id="activeCodeLanguage"></span>
+                <p id="activeCodeDescription"></p>
+              </div>
+              <pre><code id="activeCode"></code></pre>
+            </div>
+          </div>
+
+          <footer class="code-context">
+            <span>SELECTED SOURCE EXCERPT</span>
+            <p id="activeCodeContext"></p>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="section-heading reveal">
+        <p class="section-index">05 / SKILLS</p>
+        <h2>My technical<br /><span>toolkit.</span></h2>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skills-console reveal">
+          <div class="console-header">
+            <span>skillset.sh</span>
+            <span>bash</span>
+          </div>
+          <div class="console-lines">
+            <p><span>$</span> loading core technologies...</p>
+            <p class="success-line">✓ Front-end systems ready</p>
+            <p class="success-line">✓ Back-end services ready</p>
+            <p class="success-line">✓ Database layer connected</p>
+            <p class="success-line">✓ Mobile and game tools loaded</p>
+            <p><span>$</span> status: <strong>ready_to_build</strong></p>
+          </div>
+        </div>
+
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <h3><span>01</span> Front-End</h3>
+            <div class="skill-cloud"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Angular</span><span>Responsive Design</span><span>UI/UX</span></div>
+          </div>
+          <div class="skill-group reveal delay-1">
+            <h3><span>02</span> Back-End & Data</h3>
+            <div class="skill-cloud"><span>PHP</span><span>Node.js</span><span>Python</span><span>Java</span><span>MySQL</span><span>RESTful APIs</span><span>WebSockets</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <h3><span>03</span> Apps & Games</h3>
+            <div class="skill-cloud"><span>Ionic</span><span>Apache Cordova</span><span>Unity</span><span>C#</span><span>SQLite</span><span>Mobile Development</span></div>
+          </div>
+          <div class="skill-group reveal delay-1">
+            <h3><span>04</span> Workflow</h3>
+            <div class="skill-cloud"><span>Debugging</span><span>Code Review</span><span>Agile</span><span>Sprint Planning</span><span>Performance Optimization</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section section">
+      <div class="section-heading reveal">
+        <p class="section-index">06 / EDUCATION</p>
+        <h2>Learning never<br /><span>stops.</span></h2>
+      </div>
+
+      <div class="education-grid">
+        <article class="education-card reveal">
+          <span class="edu-year">2022 — PRESENT</span>
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>Arab Open University, Lebanon</p>
+          <div class="edu-line"></div>
+          <span>Software development, databases, web technologies, and computer science foundations.</span>
+        </article>
+        <article class="education-card reveal delay-1">
+          <span class="edu-year">2018 — 2022</span>
+          <h3>Technical Degree in Computer Science</h3>
+          <p>E.T.S.T.C, Lebanon</p>
+          <div class="edu-line"></div>
+          <span>Graduated with a final score of 15.7.</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-shell reveal">
+        <div>
+          <p class="section-index">07 / CONTACT</p>
+          <h2>Have a project<br />in mind?</h2>
+          <p>
+            Let’s create something useful, memorable, and built to last.
+            Send me a message and tell me what you are working on.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:Anthonychammas8@gmail.com">
+            <span class="contact-label">EMAIL</span>
+            <strong>Anthonychammas8@gmail.com</strong>
+            <i>↗</i>
+          </a>
+          <a class="contact-link" href="tel:+96171069283">
+            <span class="contact-label">PHONE</span>
+            <strong>+961 71 069 283</strong>
+            <i>↗</i>
+          </a>
+          <a class="contact-link" href="https://github.com/anthonychammas8" target="_blank" rel="noreferrer">
+            <span class="contact-label">GITHUB</span>
+            <strong>github.com/anthonychammas8</strong>
+            <i>↗</i>
+          </a>
+          <div class="contact-link static">
+            <span class="contact-label">LOCATION</span>
+            <strong>Dekweneh, Lebanon</strong>
+            <i>⌖</i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed &amp; built by <strong>Anthony Chammas</strong></p>
+    <p><span>&lt;/&gt;</span> with curiosity, caffeine, and clean code.</p>
+    <button id="backToTop" aria-label="Back to top">↑</button>
+  </footer>
+
+  <script src="code-samples.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
