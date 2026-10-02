@@ -1,6 +1,8 @@
 # Anthony Chammas — Developer Portfolio
 
-Personal portfolio for Anthony Chammas, Senior Full-Stack Developer.
+Personal portfolio for Anthony Chammas, Full-Stack Developer.
+
+Live site: https://anthonychammas8.github.io/
 
 ## Included project coverage
 
@@ -31,16 +33,9 @@ does not include credentials, dependencies, generated files, or private user dat
 
 Open `index.html` directly, or use VS Code Live Server.
 
-## Add the Unity videos
+## Unity videos
 
-Place MP4 files in the `videos` folder using these exact names:
-
-- `tank-game-demo.mp4`
-- `2d-game-demo.mp4`
-- `car-simulation-demo.mp4`
-- `slot-machine-demo.mp4`
-
-The video `src` paths are already present in `index.html`. Once the files are added, the players will load them automatically.
+Gameplay demo recordings live in the `videos` folder and play directly on the site.
 
 ## Ownership
 
