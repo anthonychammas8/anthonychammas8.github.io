@@ -566,6 +566,8 @@ button {
 }
 
 .timeline {
+  --date-col: 180px;
+  --marker-col: 36px;
   position: relative;
   display: grid;
   gap: 42px;
@@ -576,25 +578,33 @@ button {
   position: absolute;
   top: 15px;
   bottom: 15px;
-  left: 188px;
+  left: calc(var(--date-col) + var(--marker-col) / 2 - 0.5px);
   width: 1px;
   background: linear-gradient(var(--green), rgba(255, 255, 255, 0.08));
 }
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 150px 36px 1fr;
+  grid-template-columns: var(--date-col) var(--marker-col) 1fr;
   align-items: start;
 }
 
 .timeline-date {
+  grid-column: 1;
+  grid-row: 1;
   color: var(--muted);
   font-family: var(--font-code);
   font-size: 0.7rem;
-  padding-top: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-align: right;
+  white-space: nowrap;
+  padding: 10px 14px 0 0;
 }
 
 .timeline-marker {
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -612,6 +622,8 @@ button {
 }
 
 .timeline-card {
+  grid-column: 3;
+  grid-row: 1;
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgba(19, 22, 34, 0.86), rgba(12, 14, 23, 0.72));
   border-radius: 18px;
@@ -1793,7 +1805,7 @@ footer span {
   .scroll-indicator { display: none; }
 
   .timeline::before {
-    left: 9px;
+    left: 5.5px;
   }
 
   .timeline-item {
@@ -1803,6 +1815,8 @@ footer span {
 
   .timeline-date {
     grid-column: 2;
+    grid-row: 1;
+    text-align: left;
     padding: 0 0 8px;
   }
 
@@ -1814,6 +1828,7 @@ footer span {
 
   .timeline-card {
     grid-column: 2;
+    grid-row: 2;
     padding: 22px;
   }
 
